@@ -9,5 +9,13 @@ select concat('xxxx-xxxx-xxxx-',right('4242 5252 6262 7272',4)) as Credit_card_n
   -- TASK #3. UNITED States of AmeRICA >>> United States of America
 select insert(insert(replace(lower("UNITED States of AmeRICA"), 'u','U'),8,1 ,"S"),18,1,"A");
 
-  
+select * from hr.employees;
+
+-- Creating new email list of empployees. for example: Steven_King_100@duotech.io
+select first_name, last_name, employee_id from employees;
+select concat(first_name, "_", last_name, "_", employee_id) from employees;
+select concat(first_name, "_", last_name, "_", employee_id, "@duotech.io") as new_emails from employees;
+select first_name, last_name, concat(first_name,"_",last_name,"_",employee_id,"@duotech.io")  as new_emails from employees;
+
+
   
